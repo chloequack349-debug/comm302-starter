@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Trebuchet MS", Roboto, "Segoe UI", Ubuntu, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.tv-headline {
+  letter-spacing: -0.035em;
+}
+
+/* Custom scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* TradingView live tick flash animations */
+@keyframes flashGreen {
+  0% {
+    background-color: rgba(8, 153, 129, 0.25);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+@keyframes flashRed {
+  0% {
+    background-color: rgba(242, 54, 69, 0.25);
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+.animate-flash-up {
+  animation: flashGreen 1s ease-out;
+}
+
+.animate-flash-down {
+  animation: flashRed 1s ease-out;
+}
